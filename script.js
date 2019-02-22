@@ -156,9 +156,8 @@ const races = [
 
 function setMap () {
   const selectedRadio = mapRadios.find(radio => radio.checked).value
-  console.log({selectedRadio})
   const {id, name, city, date} = races.find(race => race.id === parseInt(selectedRadio))
-  console.log({id, name, city, date})
+
   raceNameElement.innerHTML = name
   raceCityElement.innerHTML = city
   raceDateElement.innerHTML = date
