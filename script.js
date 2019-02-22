@@ -1,4 +1,5 @@
 const mapRadios = Array.from(document.querySelectorAll('.map-radios input'))
+const mapLabels = Array.from(document.querySelectorAll('.map-radios label'))
 const raceImages = Array.from(document.querySelectorAll('.image-container li'))
 const raceNameElement = document.querySelector('.race-name')
 const raceCityElement = document.querySelector('.race-city')
@@ -166,5 +167,13 @@ function setMap () {
   document.querySelector(`.map-image-${id}`).classList.add('active')
 }
 
+function checkRadio (event) {
+  const id = event.target.getAttribute('for')
+  
+  mapRadios.forEach(radio => radio.checked = false)
+  document.getElementById(id).click()
+}
+
 mapRadios.forEach(radio => radio.addEventListener('change', setMap))
+mapLabels.forEach(radio => radio.addEventListener('mouseenter', checkRadio))
 mapRadios[0].click()
