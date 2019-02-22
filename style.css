@@ -91,6 +91,10 @@ h1 {
   text-transform: capitalize;
 }
 
+.map-radios {
+  justify-content: flex-start;
+}
+
 .map-radios label {
   display: block;
   height: 90px;
