@@ -168,3 +168,4 @@ function setMap () {
 }
 
 mapRadios.forEach(radio => radio.addEventListener('change', setMap))
+mapRadios[0].click()
