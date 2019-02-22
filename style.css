@@ -1,0 +1,125 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #333331;
+  color: #fefefc;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-family: 'Raleway Medium', sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+  width: 1000px;
+  height: 585px;
+}
+
+.image-container svg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.image-container li path {
+  stroke: #51514f;
+  stroke-width: 2px;
+  transition: all .5s;
+}
+
+.image-container li.active svg {
+  z-index: 2;
+}
+
+.image-container li.active path {
+  stroke: #fff;
+  stroke-width: 4px;
+}
+
+.race {
+  margin: 25px 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.race li {
+  height: 35px;
+  font-family: 'Raleway Light', sans-serif;
+  font-size: 20px;
+  line-height: 35px;
+  padding: 0 18px;
+}
+
+.race li:first-of-type {
+  padding-left: 0;
+}
+
+.race-city {
+  border-left: 1px solid #999997;
+  border-right: 1px solid #999997;
+}
+
+.race-date {
+  text-transform: capitalize;
+}
+
+.map-radios label {
+  display: block;
+  height: 90px;
+  width: 90px;
+  font-family: 'Raleway SemiBold', sans-serif;
+  text-align: center;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.map-radios .number {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 15px;
+  background: #282826;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+}
+
+.map-radios input {
+  display: none;
+}
+
+.map-radios input:checked + label {
+  background: #282826;
+  padding: 5px auto 15px;
+}
+
+.map-radios input:checked + label .number {
+  background: #323230;
+}
