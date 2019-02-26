@@ -26,7 +26,6 @@ h1 {
 
 .container {
   width: 95%;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -49,19 +48,29 @@ h1 {
   left: 0;
 }
 
+.image-container li svg:last-of-type {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
 .image-container li path {
   stroke: #51514f;
   stroke-width: 2px;
   transition: all .5s;
 }
 
-.image-container li.active svg {
+.image-container li.hover svg:first-of-type {
   z-index: 2;
 }
 
-.image-container li.active path {
+.image-container li.hover svg:first-of-type path {
   stroke: #fff;
   stroke-width: 4px;
+}
+
+.image-container li.active svg:last-of-type {
+  opacity: 1;
+  z-index: 2;
 }
 
 .race {

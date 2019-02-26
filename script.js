@@ -155,25 +155,38 @@ const races = [
   }
 ]
 
-function setMap () {
+function setMap (showData = false) {
   const selectedRadio = mapRadios.find(radio => radio.checked).value
   const {id, name, city, date} = races.find(race => race.id === parseInt(selectedRadio))
+  const currentMap = document.querySelector(`.map-image-${id}`)
 
   raceNameElement.innerHTML = name
   raceCityElement.innerHTML = city
   raceDateElement.innerHTML = date
 
+  raceImages.forEach(image => image.classList.remove('hover'))
   raceImages.forEach(image => image.classList.remove('active'))
-  document.querySelector(`.map-image-${id}`).classList.add('active')
+
+  currentMap.classList.add('hover')
+  
+  if (showData) {
+    currentMap.classList.add('active')
+  }
 }
 
 function checkRadio (event) {
   const id = event.target.getAttribute('for')
+  const radio = document.getElementById(id)
+
+  if (radio.checked) {
+    return
+  }
   
   mapRadios.forEach(radio => radio.checked = false)
-  document.getElementById(id).click()
+  radio.click()
 }
 
-mapRadios.forEach(radio => radio.addEventListener('change', setMap))
+mapRadios.forEach(radio => radio.addEventListener('change', () => setMap()))
 mapLabels.forEach(radio => radio.addEventListener('mouseenter', checkRadio))
+mapLabels.forEach(radio => radio.addEventListener('click', () => setMap(true)))
 mapRadios[0].click()
