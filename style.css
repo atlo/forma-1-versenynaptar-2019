@@ -38,8 +38,6 @@ h1 {
 
 .image-container {
   position: relative;
-  width: 1000px;
-  height: 585px;
 }
 
 .image-container svg {
@@ -49,7 +47,13 @@ h1 {
   left: 0;
 }
 
+.image-container .hover svg:first-of-type,
+.image-container .active svg:first-of-type {
+  position: relative;
+}
+
 .image-container li svg:last-of-type {
+  display: none;
   opacity: 0;
   transition: opacity .5s;
 }
@@ -75,6 +79,7 @@ h1 {
 }
 
 .image-container li.active svg:last-of-type {
+  display: block;
   opacity: 1;
   z-index: 2;
 }
@@ -146,4 +151,21 @@ h1 {
 
 .map-radios input:checked + label .number {
   background: #323230;
+}
+
+@media(max-width: 1000px) {
+ h1 {
+   font-size: 24px;
+   text-align: center;
+ }
+
+ .race,
+ .map-radios {
+   justify-content: center;
+ }
+
+ .race li {
+   font-size: 16px;
+   padding: 0 10px;
+ }
 }
