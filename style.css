@@ -54,11 +54,16 @@ h1 {
   transition: opacity .5s;
 }
 
-.image-container li path {
+.image-container li svg:first-of-type path {
+  fill: transparent;
   stroke: #51514f;
   stroke-width: 2px;
   transition: all .5s;
 }
+
+/* .image-container .cls-1 {
+  stroke: transparent;
+} */
 
 .image-container li.hover svg:first-of-type {
   z-index: 2;
@@ -72,6 +77,11 @@ h1 {
 .image-container li.active svg:last-of-type {
   opacity: 1;
   z-index: 2;
+}
+
+.image-container li svg:last-of-type .cls-1 {
+  stroke: white;
+  stroke-width: 0;
 }
 
 .race {
