@@ -8,6 +8,7 @@ body {
   margin: 0;
   background: #333331;
   color: #fefefc;
+  font-family: 'Raleway', sans-serif;
 }
 
 ul {
@@ -19,9 +20,12 @@ li {
 }
 
 h1 {
-  font-family: 'Raleway Medium', sans-serif;
   font-size: 40px;
-  font-weight: normal;
+  font-weight: 600;
+}
+
+h1 span {
+  font-weight: 300;
 }
 
 .container {
@@ -89,6 +93,27 @@ h1 {
   stroke-width: 0;
 }
 
+.details {
+  position: relative;
+}
+
+.call-to-action {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  display: flex;
+}
+
+.call-to-action img {
+  width: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.call-to-action span {
+  font-size: 20px;
+}
+
 .race {
   margin: 25px 0;
   justify-content: flex-start;
@@ -97,7 +122,6 @@ h1 {
 
 .race li {
   height: 35px;
-  font-family: 'Raleway Light', sans-serif;
   font-size: 20px;
   line-height: 35px;
   padding: 0 18px;
@@ -105,6 +129,10 @@ h1 {
 
 .race li:first-of-type {
   padding-left: 0;
+}
+
+.race-name {
+  font-weight: 600;
 }
 
 .race-city {
@@ -124,7 +152,7 @@ h1 {
   display: block;
   height: 90px;
   width: 90px;
-  font-family: 'Raleway SemiBold', sans-serif;
+  font-weight: 600;
   text-align: center;
   padding-top: 5px;
   margin-bottom: 5px;
@@ -153,6 +181,28 @@ h1 {
   background: #323230;
 }
 
+footer {
+  margin-top: 70px;
+  background: #282826;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+footer ul {
+  margin: 0;
+}
+
+footer img {
+  width: 190px;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #fefefc;
+  text-decoration: none;
+}
+
 @media(max-width: 1000px) {
  h1 {
    font-size: 24px;
@@ -167,5 +217,9 @@ h1 {
  .race li {
    font-size: 16px;
    padding: 0 10px;
+ }
+
+ .call-to-action {
+   display: none;
  }
 }
