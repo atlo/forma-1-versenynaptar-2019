@@ -57,9 +57,7 @@ h1 span {
 }
 
 .image-container li svg:last-of-type {
-  display: none;
   opacity: 0;
-  transition: opacity .5s;
 }
 
 .image-container li svg:first-of-type path {
@@ -68,10 +66,6 @@ h1 span {
   stroke-width: 2px;
   transition: all .5s;
 }
-
-/* .image-container .cls-1 {
-  stroke: transparent;
-} */
 
 .image-container li.hover svg:first-of-type {
   z-index: 2;
@@ -83,9 +77,9 @@ h1 span {
 }
 
 .image-container li.active svg:last-of-type {
-  display: block;
-  opacity: 1;
   z-index: 2;
+  opacity: 1;
+  transition: opacity .5s;
 }
 
 .image-container li svg:last-of-type .cls-1 {
