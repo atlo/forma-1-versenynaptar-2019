@@ -176,6 +176,49 @@ h1 span {
   background: #323230;
 }
 
+.recommended {
+  margin-top: 125px;
+}
+
+.recommended li {
+  max-width: 235px;
+}
+
+.recommended a,
+.recommended h3 {
+  color: #fefefc;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.recommended img {
+  width: 100%;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin: 30px auto;
+}
+
+.social-buttons img {
+  width: auto;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
 footer {
   margin-top: 70px;
   background: #282826;
@@ -216,5 +259,15 @@ footer a {
 
  .call-to-action {
    display: none;
+ }
+
+ .recommended ul {
+   flex-wrap: wrap;
+ }
+
+ .recommended li {
+   width: 100%;
+   max-width: 300px;
+   margin-bottom: 50px;
  }
 }
